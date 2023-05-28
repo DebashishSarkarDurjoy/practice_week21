@@ -1,14 +1,16 @@
+# Not working as expected: Logical Error
+
 import heapq
 
 def get_median(max_heap, min_heap):
     if  len(min_heap) > len(max_heap):
-        min_val = heapq.heappop(min_heap)
-        heapq.heappush(min_heap, min_val)
-        return min_val
+        # min_val = heapq.heappop(min_heap)
+        # heapq.heappush(min_heap, min_val)
+        return min_heap[0]
     elif len(max_heap) > len(min_heap):
-        max_val = heapq.heappop(max_heap)
-        heapq.heappush(max_heap, max_val)
-        return max_val
+        # max_val = heapq.heappop(max_heap)
+        # heapq.heappush(max_heap, max_val)
+        return max_heap[0]
     else:
         max_val = heapq.heappop(max_heap)
         heapq.heappush(max_heap, max_val)
