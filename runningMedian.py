@@ -22,7 +22,7 @@ def add(num, max_heap, min_heap):
         heapq.heappush(max_heap, num)
         return
     
-    median = get_median(min_heap, max_heap)
+    median = get_median(max_heap, min_heap)
     if num < median:
         heapq.heappush(max_heap, num)
     else:
